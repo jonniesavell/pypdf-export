@@ -2,7 +2,7 @@ from pypdf import PdfReader
 import stanza
 
 upos = ['ADJ', 'ADV', 'ADP', 'VERB', 'PROPN', 'NOUN']
-en_nlp = stanza.Pipeline('en')
+en_nlp = stanza.Pipeline('en', download_method=DownloadMethod.REUSE_RESOURCES)
 reader = PdfReader('./data/true-pdf-sample.pdf')
 
 try:
