@@ -1,5 +1,6 @@
 from pypdf import PdfReader
 import stanza
+from stanza.pipeline.core import DownloadMethod
 
 upos = ['ADJ', 'ADV', 'ADP', 'VERB', 'PROPN', 'NOUN']
 en_nlp = stanza.Pipeline('en', download_method=DownloadMethod.REUSE_RESOURCES)
